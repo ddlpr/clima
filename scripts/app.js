@@ -1,6 +1,6 @@
 'use strict';
 
-const weatherFormButtonElement = document.querySelector('.weatherForm__btn');
+const weatherFormElement = document.querySelector('.weatherForm');
 const weatherFormInputElement = document.querySelector('.weatherForm__input');
 const weatherCardElement = document.querySelector('.weatherCard');
 const weatherCardImageElement = document.querySelector('.weatherCard__img');
@@ -65,10 +65,12 @@ const newSearch = async function (city) {
   return data;
 }
 
-weatherFormButtonElement.addEventListener('click', function () {
+weatherFormElement.addEventListener('submit', function(e) {
+  e.preventDefault();
   let city = weatherFormInputElement.value.trim().toLowerCase();
   
   newSearch(city)
     .then(data => displayWeather(data, city));
-  weatherFormInputElement.value = '';
+  this.reset();
+  console.log(weatherFormInputElement.value);
 });
