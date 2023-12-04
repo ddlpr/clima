@@ -13,17 +13,44 @@
   </head>
   <body>
     <div class="page-container">
-      <!--
-      <h1>Clima de Tijuana</h1>
-      <h3 id="clima_msg">0</h3>
-      <h3 id="desc"></h3>
-      -->
-      <div class="wrapper">
-        <div class="weatherForm">
-          <input class="weatherForm__input form-control" type="text" placeholder="Default input" aria-label="default input example">
-        </div>
-      </div>
 
+      <!-- Wrapper -->
+      <div class="wrapper">
+
+        <div class="weatherForm">
+          <input class="weatherForm__input form-control" type="text" placeholder="City name" aria-label="default input example">
+          <button type="button" class="weatherForm__btn btn btn-primary">→</button>
+        </div>
+
+        <div class="weatherCard hidden">
+          <div class="weatherCard__header">
+            <p class="weatherCard__city"></p>
+            <p class="weatherCard__time"></p>
+          </div>
+          <div class="weatherCard__main">
+            <div class="weatherCard__info-container">
+              <p class="weatherCard__img"></p>
+              <p class="weatherCard__units"><span class="weatherCard__temp">Temperature</span> ºC</p>
+              <p class="weatherCard__desc">Description</p>
+            </div>
+            <div class="weatherCard__temp-container">
+              <p><span style="color: red">↑</span> <span class="weatherCard__temp-max">Max</span> ºC</p>
+              <p><span style="color: blue">↓</span> <span class="weatherCard__temp-min">Min</span> ºC</p>
+            </div>
+          </div>
+          <div class="weatherCard__humidity-container">
+            <p class="weatherCard__label">Humedad</p>
+            <p>💧 <span class="weatherCard__humidity">Humidity</span>%</p>
+          </div>
+        </div>
+
+        <div class="error hidden">
+          <p class="error__message">No se encontró información sobre “<span class="error__city"></span>”</p>
+        </div>
+        
+      </div>
+      <!-- \ Wrapper -->
+      
     </div>
 
     <script
