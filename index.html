@@ -4,6 +4,7 @@
     <title>Clima</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,18 +30,19 @@
           </div>
           <div class="weatherCard__main">
             <div class="weatherCard__info-container">
-              <p class="weatherCard__img"></p>
+              <!-- <p class="weatherCard__img"></p> -->
+              <img class="weatherCard__img" src="" alt="">
               <p class="weatherCard__units"><span class="weatherCard__temp">Temperature</span> ºC</p>
               <p class="weatherCard__desc">Description</p>
             </div>
             <div class="weatherCard__temp-container">
-              <p><span style="color: red">↑</span> <span class="weatherCard__temp-max">Max</span> ºC</p>
-              <p><span style="color: blue">↓</span> <span class="weatherCard__temp-min">Min</span> ºC</p>
+              <p><i class="bi bi-thermometer-sun" style="color: #f16932"></i> <span class="weatherCard__temp-max">Max</span> ºC</p>
+              <p><i class="bi bi-thermometer-snow" style="color: #3d85c6"></i> <span class="weatherCard__temp-min">Min</span> ºC</p>
             </div>
           </div>
           <div class="weatherCard__humidity-container">
             <p class="weatherCard__label">Humedad</p>
-            <p>💧 <span class="weatherCard__humidity">Humidity</span>%</p>
+            <p><i class="bi bi-moisture"></i> <span class="weatherCard__humidity">Humidity</span>%</p>
           </div>
         </div>
 
@@ -53,12 +55,7 @@
       
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="./scripts/app.js"></script>
     <script type="text/javascript" src="./scripts/weather.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
   </body>
 </html>

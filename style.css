@@ -11,8 +11,6 @@
 
 .wrapper {
   justify-self: center;
-  display: flex;
-  flex-direction: column;
   width: 40%;
 }
 
@@ -68,13 +66,21 @@
 }
 
 .weatherCard__img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px 0;
+  background-color: #ddd;
+  border-radius: 50%;
   align-self: center;
-  margin: 0;
-  font-size: 4em;
 }
 
 .weatherCard__temp {
-  font-size: 2em;
+  justify-self: center;
+  font-size: 2.3em;
+}
+
+.weatherCard__temp-container {
+  font-size: 1.4em;
 }
 
 .weatherCard--dark {
@@ -85,6 +91,8 @@
 .weatherCard__humidity-container {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 /* Error Modal */
